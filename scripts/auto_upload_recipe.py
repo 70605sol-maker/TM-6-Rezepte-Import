@@ -91,7 +91,7 @@ def load_recipe(file_path):
             ingredient = check_text(mapping.get("ingredient"), f"Schritt {i}: Zutat", 300)
             if ingredient not in ingredients or not ingredient.startswith(slot):
                 raise ValueError(f"Schritt {i}: Markierung passt nicht zur Zutatenliste.")
-            if not re.match(r"^\\d+(?:[.,]\\d+)?\\s*g\\s+\\S", slot):
+            if not re.match(r"^\d+(?:[.,]\d+)?\s*g\s+\S", slot):
                 raise ValueError(f"Schritt {i}: nur Grammangaben automatisch wiegen.")
             if text.count(slot) != 1 or slot in seen_slots:
                 raise ValueError(f"Schritt {i}: Markierung im Text nicht eindeutig.")
