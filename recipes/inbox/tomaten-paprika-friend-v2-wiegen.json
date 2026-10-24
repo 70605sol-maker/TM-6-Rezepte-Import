@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "title": "Große Tomaten-Paprika-Pizzasoße (TM6 + Friend) v2 – mit Wiegen",
+  "servings": 8,
+  "prep_time_minutes": 12,
+  "total_time_minutes": 45,
+  "ingredients": [
+    "1 Zwiebel, halbiert (Tomatenbasis)",
+    "1 Knoblauchzehe (Tomatenbasis)",
+    "1 TL Paprika edelsüß (Tomatenbasis)",
+    "1 TL Oregano",
+    "1 TL Thymian",
+    "1 TL Basilikum",
+    "1 TL Salz (Tomatenbasis, nach Geschmack)",
+    "10 g Olivenöl (Tomatenbasis)",
+    "400 g gehackte Tomaten (1 Dose, Abtropfgewicht prüfen)",
+    "50 g Tomatenmark (Tomatenbasis)",
+    "20 g Balsamico",
+    "1 Zwiebel, halbiert (Paprikabasis)",
+    "1 Knoblauchzehe (Paprikabasis)",
+    "200 g rote Paprika, in Stücken",
+    "1 TL Paprika edelsüß (Paprikabasis)",
+    "1 TL Salz (Paprikabasis, nach Geschmack)",
+    "20 g Olivenöl (Paprikabasis)",
+    "250 g passierte Tomaten",
+    "30 g Tomatenmark (Paprikabasis)"
+  ],
+  "steps": [
+    {
+      "text": "[TM6] Für die Tomatenbasis Zwiebel, Knoblauch, Paprika edelsüß, Oregano, Thymian, Basilikum und zunächst wenig Salz in den Mixtopf geben. Zerkleinern.",
+      "cooking": {
+        "seconds": 5,
+        "temperature": null,
+        "speed": "5",
+        "reverse": false
+      }
+    },
+    {
+      "text": "[TM6] Nach unten schieben, 10 g Olivenöl zugeben und andünsten.",
+      "weigh": [
+        {
+          "slot": "10 g Olivenöl",
+          "ingredient": "10 g Olivenöl (Tomatenbasis)"
+        }
+      ],
+      "cooking": {
+        "seconds": 180,
+        "temperature": 100,
+        "speed": "1",
+        "reverse": false
+      }
+    },
+    {
+      "text": "[TM6] 400 g gehackte Tomaten, 50 g Tomatenmark und 20 g Balsamico im Mixtopf nacheinander wiegen und kurz mit dem Spatel vermengen.",
+      "weigh": [
+        {
+          "slot": "400 g gehackte Tomaten",
+          "ingredient": "400 g gehackte Tomaten (1 Dose, Abtropfgewicht prüfen)"
+        },
+        {
+          "slot": "50 g Tomatenmark",
+          "ingredient": "50 g Tomatenmark (Tomatenbasis)"
+        },
+        {
+          "slot": "20 g Balsamico",
+          "ingredient": "20 g Balsamico"
+        }
+      ]
+    },
+    {
+      "text": "[FRIEND, manuell] Den Inhalt des TM6-Mixtopfes vollständig in den zweiten, geeigneten Mixtopf umfüllen, diesen auf den Thermomix Friend setzen und von Hand 25 Min. / 100 °C / Stufe 1 (Linkslauf) starten. Achtung: Friend besitzt keine Waage. Den TM6-Mixtopf für die Paprikasoße reinigen; bei Bedarf kurz ausspülen und sorgfältig abtrocknen."
+    },
+    {
+      "text": "[TM6] Zwiebel, Knoblauch und 200 g rote Paprika in Stücken sowie Paprika edelsüß und zunächst wenig Salz zugeben. Zerkleinern.",
+      "weigh": [
+        {
+          "slot": "200 g rote Paprika",
+          "ingredient": "200 g rote Paprika, in Stücken"
+        }
+      ],
+      "cooking": {
+        "seconds": 5,
+        "temperature": null,
+        "speed": "5",
+        "reverse": false
+      }
+    },
+    {
+      "text": "[TM6] Nach unten schieben, 20 g Olivenöl zugeben und andünsten.",
+      "weigh": [
+        {
+          "slot": "20 g Olivenöl",
+          "ingredient": "20 g Olivenöl (Paprikabasis)"
+        }
+      ],
+      "cooking": {
+        "seconds": 180,
+        "temperature": 120,
+        "speed": "1",
+        "reverse": true
+      }
+    },
+    {
+      "text": "[TM6] 250 g passierte Tomaten und 30 g Tomatenmark zugeben und 25 Minuten garen, während der Friend die Tomatenbasis kocht.",
+      "weigh": [
+        {
+          "slot": "250 g passierte Tomaten",
+          "ingredient": "250 g passierte Tomaten"
+        },
+        {
+          "slot": "30 g Tomatenmark",
+          "ingredient": "30 g Tomatenmark (Paprikabasis)"
+        }
+      ],
+      "cooking": {
+        "seconds": 1500,
+        "temperature": 100,
+        "speed": "1",
+        "reverse": true
+      }
+    },
+    {
+      "text": "[BEIDE] Garvorgänge abschließen. Friend-Mixtopf vorsichtig abnehmen, heiße Tomatenbasis langsam zur Paprikabasis im TM6 geben. Füllstand prüfen: MAX-Markierung 2,2 l nicht überschreiten. Deckel korrekt schließen."
+    },
+    {
+      "text": "[TM6] Die heißen Soßen zunächst vorsichtig bei niedriger Drehzahl vermischen. Nicht mit hoher Geschwindigkeit starten.",
+      "cooking": {
+        "seconds": 10,
+        "temperature": null,
+        "speed": "3",
+        "reverse": false
+      }
+    },
+    {
+      "text": "[TM6] Bei geschlossenem Deckel schrittweise auf Stufe 5 erhöhen und fein pürieren. Nicht Turbo verwenden.",
+      "cooking": {
+        "seconds": 15,
+        "temperature": null,
+        "speed": "5",
+        "reverse": false
+      }
+    },
+    {
+      "text": "Abschmecken. Salz vorsichtig ergänzen. Die angegebene Gesamtdauer kann je nach Spülen, Aufheizzeiten und Umfüllen variieren."
+    }
+  ],
+  "notes": [
+    "Wiegehinweise gelten ausschließlich für TM6. Thermomix Friend hat keine eigene Waage; alle mengenbezogenen Einwaagen der Tomatenbasis erfolgen vor dem Umfüllen im TM6.",
+    "Inoffizielle TM6-/Friend-Adaption. Sämtliche Koch- und Wiegeschritte sowie die automatische Waagenanzeige sind vor dem praktischen Einsatz zu prüfen.",
+    "Tomatenbasis wird nach dem Andünsten und Einwiegen aller Zutaten im Friend parallel weitergekocht.",
+    "Die Salzmenge aus den beiden Ausgangsrezepten beträgt insgesamt bis zu 2 TL. Zunächst weniger verwenden.",
+    "Heiße Soßen nur vorsichtig zusammenführen. MAX-Markierung beachten; Pürierdrehzahl langsam erhöhen.",
+    "Das Rezept nutzt für Zutaten mit Grammangabe INGREDIENT-Markierungen. Bei stück- und löffelweisen Zutaten ist keine automatische Grammwägung vorgesehen."
+  ]
+}
