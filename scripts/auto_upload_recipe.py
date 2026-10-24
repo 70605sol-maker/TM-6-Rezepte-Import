@@ -15,6 +15,7 @@ from cookidoo_api import Cookidoo
 from cookidoo_api.types import (
     CookidooConfig,
     CookidooCreateCustomRecipe,
+    CookidooIngredientAnnotation,
     CookidooInstruction,
     CookidooLocalizationConfig,
     CookidooTemperatureSetting,
@@ -76,9 +77,30 @@ def load_recipe(file_path):
         if not isinstance(raw, dict):
             raise ValueError(f"Schritt {i}: kein Objekt.")
         text = check_text(raw.get("text"), f"Schritt {i}")
+        annotations = []
+        raw_weigh = raw.get("weigh", [])
+        if not isinstance(raw_weigh, list) or len(raw_weigh) > 20:
+            raise ValueError(f"Schritt {i}: ungültige Wiegezuordnungen.")
+        if raw_weigh and text.lstrip().upper().startswith("[FRIEND"):
+            raise ValueError(f"Schritt {i}: Friend hat keine Waage.")
+        seen_slots = set()
+        for mapping in raw_weigh:
+            if not isinstance(mapping, dict):
+                raise ValueError(f"Schritt {i}: ungültige Zutatmarkierung.")
+            slot = check_text(mapping.get("slot"), f"Schritt {i}: Markierung", 120)
+            ingredient = check_text(mapping.get("ingredient"), f"Schritt {i}: Zutat", 300)
+            if ingredient not in ingredients or not ingredient.startswith(slot):
+                raise ValueError(f"Schritt {i}: Markierung passt nicht zur Zutatenliste.")
+            if not re.match(r"^\\d+(?:[.,]\\d+)?\\s*g\\s+\\S", slot):
+                raise ValueError(f"Schritt {i}: nur Grammangaben automatisch wiegen.")
+            if text.count(slot) != 1 or slot in seen_slots:
+                raise ValueError(f"Schritt {i}: Markierung im Text nicht eindeutig.")
+            annotations.append(CookidooIngredientAnnotation(slot=slot, description=ingredient))
+            seen_slots.add(slot)
+
         config = raw.get("cooking")
         if config is None:
-            steps.append(CookidooInstruction(text=text))
+            steps.append(CookidooInstruction(text=text, annotations=annotations))
             continue
         if not isinstance(config, dict):
             raise ValueError(f"Schritt {i}: falsche Kocheinstellung.")
@@ -117,7 +139,7 @@ def load_recipe(file_path):
             speed=str(speed),
             direction="CCW" if reverse else None,
         )
-        steps.append(CookidooInstruction(text=full, annotations=[ann]))
+        steps.append(CookidooInstruction(text=full, annotations=[*annotations, ann]))
         count += 1
 
     recipe = CookidooCreateCustomRecipe(
@@ -149,6 +171,12 @@ def load_recipe(file_path):
         requires_annotations_check=recipe.requires_annotations_check,
     )
     assert len(payload["instructions"]) == len(raw_steps)
+    expected_weigh = sum(len(raw.get("weigh", [])) for raw in raw_steps)
+    got_weigh = sum(
+        len([a for a in step.get("annotations", []) if a.get("type") == "INGREDIENT"])
+        for step in payload["instructions"]
+    )
+    assert got_weigh == expected_weigh
     assert sum(
         len([a for a in s.get("annotations", []) if a.get("type") == "TTS"])
         for s in payload["instructions"]
