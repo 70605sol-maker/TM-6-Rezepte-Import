@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "title": "Große Tomaten-Paprika-Pizzasoße (TM6 + Friend) v1",
+  "servings": 8,
+  "prep_time_minutes": 12,
+  "total_time_minutes": 45,
+  "ingredients": [
+    "1 Zwiebel, halbiert (Tomatenbasis)",
+    "1 Knoblauchzehe (Tomatenbasis)",
+    "1 TL Paprika edelsüß (Tomatenbasis)",
+    "1 TL Oregano",
+    "1 TL Thymian",
+    "1 TL Basilikum",
+    "1 TL Salz (Tomatenbasis; nach Geschmack reduzieren)",
+    "10 g Olivenöl (Tomatenbasis)",
+    "1 Dose gehackte Tomaten, ca. 400 g",
+    "50 g Tomatenmark (Tomatenbasis)",
+    "20 g Balsamico",
+    "1 Zwiebel, halbiert (Paprikabasis)",
+    "1 Knoblauchzehe (Paprikabasis)",
+    "200 g rote Paprika, in Stücken",
+    "1 TL Paprika edelsüß (Paprikabasis)",
+    "1 TL Salz (Paprikabasis; nach Geschmack reduzieren)",
+    "20 g Olivenöl (Paprikabasis)",
+    "250 g passierte Tomaten",
+    "30 g Tomatenmark (Paprikabasis)"
+  ],
+  "steps": [
+    {
+      "text": "[TM6] Tomatenbasis vorbereiten: 1 halbierte Zwiebel, 1 Knoblauchzehe, 1 TL Paprika edelsüß, je 1 TL Oregano, Thymian und Basilikum sowie bis zu 1 TL Salz in den Mixtopf geben und zerkleinern. Wer weniger Salz bevorzugt, zunächst weniger verwenden.",
+      "cooking": {
+        "seconds": 5,
+        "temperature": null,
+        "speed": "5",
+        "reverse": false
+      }
+    },
+    {
+      "text": "[FRIEND, manuell] Die zerkleinerte Mischung in den zweiten Mixtopf auf dem Thermomix Friend geben. 10 g Olivenöl zufügen. Den Friend von Hand auf 3 Min. / 100 °C / Stufe 1 einstellen (er rührt immer im Linkslauf). Die Mischung andünsten. Der Friend hat keine Waage."
+    },
+    {
+      "text": "[FRIEND, manuell – jetzt den Parallelbetrieb starten] Eine Dose gehackte Tomaten (ca. 400 g), 50 g Tomatenmark und 20 g Balsamico zugeben. Deckel korrekt aufsetzen. Friend von Hand auf 25 Min. / 100 °C / Stufe 1 (Linkslauf) einstellen und starten. Während die Tomatenbasis gart, die Paprikabasis im TM6 kochen."
+    },
+    {
+      "text": "[TM6] 1 halbierte Zwiebel, 1 Knoblauchzehe, 200 g rote Paprika in Stücken, 1 TL Paprika edelsüß und bis zu 1 TL Salz in den TM6-Mixtopf geben. Zerkleinern.",
+      "cooking": {
+        "seconds": 5,
+        "temperature": null,
+        "speed": "5",
+        "reverse": false
+      }
+    },
+    {
+      "text": "[TM6] 20 g Olivenöl zur Paprikamischung geben. Andünsten.",
+      "cooking": {
+        "seconds": 180,
+        "temperature": 120,
+        "speed": "1",
+        "reverse": true
+      }
+    },
+    {
+      "text": "[TM6] 250 g passierte Tomaten und 30 g Tomatenmark zugeben. Paprikabasis garen. Währenddessen kocht die Tomatenbasis im Friend weiter.",
+      "cooking": {
+        "seconds": 1500,
+        "temperature": 100,
+        "speed": "1",
+        "reverse": true
+      }
+    },
+    {
+      "text": "[BEIDE GERÄTE] Prüfen, ob beide Garvorgänge abgeschlossen sind. Den heißen zweiten Mixtopf vom Friend vorsichtig abnehmen. Die Tomatenbasis langsam zur Paprikabasis in den TM6-Mixtopf füllen. Füllstand kontrollieren: die MAX-Markierung von 2,2 l darf nicht überschritten werden. Deckel sicher schließen. Heiße Flüssigkeit nicht spritzen lassen."
+    },
+    {
+      "text": "[TM6] Beide Soßen zunächst bei niedriger Drehzahl vermengen. Bei heißen Soßen die Geschwindigkeit für den folgenden Pürierschritt nur schrittweise erhöhen.",
+      "cooking": {
+        "seconds": 10,
+        "temperature": null,
+        "speed": "3",
+        "reverse": false
+      }
+    },
+    {
+      "text": "[TM6] Für eine gleichmäßige Pizzasoße weiter pürieren, ohne Turbo-Modus. Den Deckel korrekt verschließen und auf heißen Dampf achten.",
+      "cooking": {
+        "seconds": 15,
+        "temperature": null,
+        "speed": "5",
+        "reverse": false
+      }
+    },
+    {
+      "text": "Konsistenz und Salzgehalt prüfen. Nach Wunsch etwas länger pürieren oder Gewürze ergänzen. Die Soße portionsweise verwenden oder entsprechend hygienisch abkühlen und aufbewahren."
+    }
+  ],
+  "notes": [
+    "Zwei separate TM6-kompatible Mixtöpfe sind erforderlich. Den zweiten Mixtopf auf dem Friend einsetzen.",
+    "Thermomix Friend: ausschließlich Stufe 1 und 2 sowie Linkslauf; keine Zerkleinerungs- oder Pürierfunktion. Einstellungen in diesem selbst erstellten Cookidoo-Rezept manuell am Friend vornehmen; die automatische Bluetooth-Übergabe ist hierfür nicht bestätigt.",
+    "Die Salzangaben entsprechen den beiden Ausgangsrezepten zusammen (maximal 2 TL). Vorzugsweise zunächst weniger salzen und am Ende abschmecken.",
+    "Die beiden 25-Minuten-Garvorgänge laufen parallel; die Gesamtdauer ist ein Planungswert und hängt von Aufheiz- und Umfüllzeiten ab.",
+    "Vor dem Pürieren die MAX-Markierung des TM6 beachten. Bei heißen Flüssigkeiten die Drehzahl stufenweise erhöhen, keinen Turbo verwenden.",
+    "Inoffizielle Zusammenführung zweier eigener Cookidoo-Kreationen; Garzeiten und Füllmengen wurden nicht praktisch getestet."
+  ]
+}
