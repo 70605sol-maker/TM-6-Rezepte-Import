@@ -1,0 +1,27 @@
+name: Cookidoo Testkonto - OAuth2 Anmeldung pruefen
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  login-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      COOKIDOO_TEST_EMAIL: ${{ secrets.COOKIDOO_TEST_EMAIL }}
+      COOKIDOO_TEST_PASSWORD: ${{ secrets.COOKIDOO_TEST_PASSWORD }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned alternate Cookidoo API
+        run: |
+          git clone https://github.com/miaucl/cookidoo-api.git /tmp/cookidoo-api
+          cd /tmp/cookidoo-api
+          git checkout 7844f053a1a0173badc64aa204fc2bb998b8bcfb
+          python -m pip install --disable-pip-version-check .
+      - name: Read-only login check
+        run: python scripts/test_cookidoo_oauth_login.py
