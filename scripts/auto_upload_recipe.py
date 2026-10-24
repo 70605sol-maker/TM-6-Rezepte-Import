@@ -63,6 +63,11 @@ def load_recipe(file_path):
     if type(prep) is not int or type(total) is not int or not 0 <= prep <= total <= 1440:
         raise ValueError("Ungültige Zeitangaben.")
 
+    enforce_quantities = obj.get("enforce_quantities_in_steps", False)
+    if type(enforce_quantities) is not bool:
+        raise ValueError("enforce_quantities_in_steps muss true/false sein.")
+    documented_ingredients = set()
+
     hints = obj.get("notes", [])
     if not isinstance(hints, list) or len(hints) > 12:
         raise ValueError("Ungültige Hinweise.")
@@ -77,6 +82,27 @@ def load_recipe(file_path):
         if not isinstance(raw, dict):
             raise ValueError(f"Schritt {i}: kein Objekt.")
         text = check_text(raw.get("text"), f"Schritt {i}")
+        if enforce_quantities:
+            uses = raw.get("uses", [])
+            if not isinstance(uses, list) or not uses:
+                # Es gibt auch reine Maschinen-, Misch- und Servierschritte.
+                uses = [] if uses == [] else None
+            if uses is None or len(uses) > 30:
+                raise ValueError(f"Schritt {i}: ungültige Zutatenreferenzen.")
+            for entry in uses:
+                if not isinstance(entry, dict):
+                    raise ValueError(f"Schritt {i}: ungültige Zutatenreferenz.")
+                ingredient = check_text(entry.get("ingredient"), "Zutatenreferenz", 300)
+                mention = check_text(entry.get("mention"), "Mengenangabe", 180)
+                if ingredient not in ingredients or text.count(mention) != 1:
+                    raise ValueError(f"Schritt {i}: Zutatenmenge fehlt im Anweisungstext.")
+                tokens = ingredient.split()
+                expected_prefix = " ".join(tokens[:3 if len(tokens) >= 3 and tokens[1] in ("g", "kg", "ml", "l", "TL", "EL") else 2])
+                if not mention.startswith(expected_prefix):
+                    raise ValueError(f"Schritt {i}: Zutatenmenge stimmt nicht mit Zutatenliste überein.")
+                if ingredient in documented_ingredients:
+                    raise ValueError(f"Schritt {i}: Zutat bereits in anderem Schritt verwendet.")
+                documented_ingredients.add(ingredient)
         annotations = []
         raw_weigh = raw.get("weigh", [])
         if not isinstance(raw_weigh, list) or len(raw_weigh) > 20:
@@ -141,6 +167,14 @@ def load_recipe(file_path):
         )
         steps.append(CookidooInstruction(text=full, annotations=[*annotations, ann]))
         count += 1
+
+    if enforce_quantities:
+        missing = set(ingredients) - documented_ingredients
+        if missing:
+            raise ValueError(
+                "Nicht alle Zutaten mit Mengenangabe in den Kochschritten: "
+                + ", ".join(sorted(missing))
+            )
 
     recipe = CookidooCreateCustomRecipe(
         name=name,
