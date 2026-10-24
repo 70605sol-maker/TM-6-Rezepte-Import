@@ -16,11 +16,13 @@ from cookidoo_api.types import (
     CookidooConfig,
     CookidooCreateCustomRecipe,
     CookidooIngredientAnnotation,
+    CookidooModeAnnotation,
     CookidooInstruction,
     CookidooLocalizationConfig,
     CookidooTemperatureSetting,
     CookidooTTSAnnotation,
     ThermomixMachineType,
+    ThermomixMode,
 )
 
 MAX_RECIPE_BYTES = 100_000
@@ -78,6 +80,7 @@ def load_recipe(file_path):
     )
     steps = []
     count = 0
+    mode_count = 0
     for i, raw in enumerate(raw_steps, 1):
         if not isinstance(raw, dict):
             raise ValueError(f"Schritt {i}: kein Objekt.")
@@ -124,7 +127,35 @@ def load_recipe(file_path):
             annotations.append(CookidooIngredientAnnotation(slot=slot, description=ingredient))
             seen_slots.add(slot)
 
+        # Optionaler TM6-Spezialmodus: im Cookidoo-Payload MODE statt TTS.
+        mode = raw.get("mode")
         config = raw.get("cooking")
+        if mode is not None:
+            if config is not None:
+                raise ValueError(f"Schritt {i}: Modus und manuelles Kochen nicht kombinieren.")
+            if text.lstrip().upper().startswith("[FRIEND"):
+                raise ValueError(f"Schritt {i}: Pürieren ist kein Friend-Modus.")
+            if not isinstance(mode, dict) or mode.get("type") != "blend":
+                raise ValueError(f"Schritt {i}: Unbekannter Spezialmodus.")
+            sec = mode.get("seconds")
+            speed = mode.get("max_speed")
+            if type(sec) is not int or not 5 <= sec <= 120:
+                raise ValueError(f"Schritt {i}: Pürierzeit außerhalb des erlaubten Bereichs.")
+            if str(speed) not in {"6", "7", "8"}:
+                raise ValueError(f"Schritt {i}: Püriermodus erfordert maximale Stufe 6–8.")
+            if "[TM6-Modus:" in text:
+                raise ValueError(f"Schritt {i}: reservierte Kennung im Text.")
+            slot = f"[TM6-Modus: Pürieren / {sec} Sek. / maximale Stufe {speed}]"
+            full = text + "\\n" + slot
+            ann = CookidooModeAnnotation(
+                slot=slot,
+                mode=ThermomixMode.BLEND,
+                time=sec,
+                speed=str(speed),
+            )
+            steps.append(CookidooInstruction(text=full, annotations=[*annotations, ann]))
+            mode_count += 1
+            continue
         if config is None:
             steps.append(CookidooInstruction(text=text, annotations=annotations))
             continue
@@ -205,6 +236,19 @@ def load_recipe(file_path):
         requires_annotations_check=recipe.requires_annotations_check,
     )
     assert len(payload["instructions"]) == len(raw_steps)
+    expected_modes = sum(1 for raw in raw_steps if raw.get("mode") is not None)
+    assert expected_modes == mode_count
+    actual_modes = [
+        a for step in payload["instructions"]
+        for a in step.get("annotations", []) if a.get("type") == "MODE"
+    ]
+    assert len(actual_modes) == mode_count
+    assert all(
+        a.get("name") == "blend" and
+        a.get("data", {}).get("speed") in {"6", "7", "8"} and
+        5 <= a.get("data", {}).get("time", 0) <= 120
+        for a in actual_modes
+    )
     expected_weigh = sum(len(raw.get("weigh", [])) for raw in raw_steps)
     got_weigh = sum(
         len([a for a in step.get("annotations", []) if a.get("type") == "INGREDIENT"])
@@ -215,7 +259,7 @@ def load_recipe(file_path):
         len([a for a in s.get("annotations", []) if a.get("type") == "TTS"])
         for s in payload["instructions"]
     ) == count
-    return recipe, count
+    return recipe, count, mode_count
 
 
 async def run(file_paths):
@@ -243,7 +287,7 @@ async def run(file_paths):
         await client.login()
         await client.get_user_info()
         print("Cookidoo-Testkonto erfolgreich angemeldet.")
-        for (recipe, count), path in zip(parsed, file_paths):
+        for (recipe, count, mode_count), path in zip(parsed, file_paths):
             existing = await client.list_custom_recipes()
             matches = [r for r in existing if r.name == recipe.name]
             if matches:
@@ -256,7 +300,17 @@ async def run(file_paths):
                     or len(created.ingredients) != len(recipe.ingredients)
                     or len(created.instructions) != len(recipe.instructions)):
                 raise RuntimeError("Rezept angelegt; Rückleseprüfung fehlgeschlagen.")
-            print(f"{path}: HOCHGELADEN; {count} automatische TM6-Schritte.")
+            if mode_count:
+                returned_modes = sum(
+                    1 for step in created.instructions
+                    if isinstance(step, CookidooInstruction)
+                    for a in step.annotations
+                    if isinstance(a, CookidooModeAnnotation)
+                    and str(a.mode) == "blend"
+                )
+                if returned_modes != mode_count:
+                    raise RuntimeError("Rezept erstellt, aber Püriermodi nicht korrekt zurückgelesen.")
+            print(f"{path}: HOCHGELADEN; {count} normale TM6-Schritte, {mode_count} Püriermodi.")
             print("Rezept-Link:", created.url)
             print("In Cookidoo-Testkonto: Rezept teilen und ins Hauptkonto übernehmen.")
 
