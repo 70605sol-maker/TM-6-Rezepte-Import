@@ -146,7 +146,7 @@ def load_recipe(file_path):
             if "[TM6-Modus:" in text:
                 raise ValueError(f"Schritt {i}: reservierte Kennung im Text.")
             slot = f"[TM6-Modus: Pürieren / {sec} Sek. / maximale Stufe {speed}]"
-            full = text + "\\n" + slot
+            full = text + "\n" + slot
             ann = CookidooModeAnnotation(
                 slot=slot,
                 mode=ThermomixMode.BLEND,
