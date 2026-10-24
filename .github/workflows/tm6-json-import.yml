@@ -1,0 +1,28 @@
+name: TM6-Rezeptimport
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'recipes/inbox/*.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install client
+        run: |
+          git clone https://github.com/miaucl/cookidoo-api.git /tmp/cookidoo-api
+          git -C /tmp/cookidoo-api checkout 7844f053a1a0173badc64aa204fc2bb998b8bcfb
+          python -m pip install /tmp/cookidoo-api
+      - name: Import recipes
+        env:
+          COOKIDOO_TEST_EMAIL: ${{ secrets.COOKIDOO_TEST_EMAIL }}
+          COOKIDOO_TEST_PASSWORD: ${{ secrets.COOKIDOO_TEST_PASSWORD }}
+        run: |
+          python scripts/auto_upload_recipe.py recipes/inbox/*.json
