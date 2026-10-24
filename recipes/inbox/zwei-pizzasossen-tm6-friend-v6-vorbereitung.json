@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "title": "Zwei Pizzasoßen: Tomate & Paprika (TM6 + Friend) v6 – vorbereitet",
+  "servings": 8,
+  "prep_time_minutes": 20,
+  "total_time_minutes": 65,
+  "enforce_quantities_in_steps": true,
+  "ingredients": [
+    "1 Zwiebel, halbiert (Tomatenbasis)",
+    "1 Knoblauchzehe (Tomatenbasis)",
+    "1 TL Paprika edelsüß (Tomatenbasis)",
+    "1 TL Oregano",
+    "1 TL Thymian",
+    "1 TL Basilikum",
+    "1 TL Salz (Tomatenbasis)",
+    "10 g Olivenöl (Tomatenbasis)",
+    "400 g gehackte Tomaten (1 Dose)",
+    "50 g Tomatenmark (Tomatenbasis)",
+    "20 g Balsamico",
+    "1 Zwiebel, halbiert (Paprikabasis)",
+    "1 Knoblauchzehe (Paprikabasis)",
+    "200 g rote Paprika, in Stücken",
+    "1 TL Paprika edelsüß (Paprikabasis)",
+    "1 TL Salz (Paprikabasis)",
+    "20 g Olivenöl (Paprikabasis)",
+    "250 g passierte Tomaten",
+    "30 g Tomatenmark (Paprikabasis)"
+  ],
+  "steps": [
+    {
+      "text": "[VORBEREITUNG – beide Soßen] Sämtliches Gemüse vor Beginn der Kochschritte vorbereiten: 2 Zwiebeln schälen und halbieren, 2 Knoblauchzehen schälen. 200 g rote Paprika waschen, entkernen und grob in Stücke schneiden. Für die Kräuter-Tomatensoße 1 halbierte Zwiebel und 1 Knoblauchzehe bereitlegen. Für die Paprika-Tomatensoße die zweite halbierte Zwiebel, die zweite Knoblauchzehe und die Paprikastücke getrennt bereitlegen. Jetzt sind alle Schneidearbeiten abgeschlossen. Fein zerkleinert wird später jeweils im TM6.",
+      "uses": []
+    },
+    {
+      "text": "[TM6 – Tomatensoße] 1 Zwiebel, halbiert (Tomatenbasis) und 1 Knoblauchzehe (Tomatenbasis) in den ersten Mixtopf geben und zerkleinern.",
+      "uses": [
+        {
+          "ingredient": "1 Zwiebel, halbiert (Tomatenbasis)",
+          "mention": "1 Zwiebel, halbiert (Tomatenbasis)"
+        },
+        {
+          "ingredient": "1 Knoblauchzehe (Tomatenbasis)",
+          "mention": "1 Knoblauchzehe (Tomatenbasis)"
+        }
+      ],
+      "cooking": {
+        "seconds": 5,
+        "temperature": null,
+        "speed": "5",
+        "reverse": false
+      }
+    },
+    {
+      "text": "[TM6 – Tomatensoße] Die zerkleinerten Zutaten mit dem Spatel nach unten schieben. 10 g Olivenöl (Tomatenbasis) zugeben und andünsten.",
+      "uses": [
+        {
+          "ingredient": "10 g Olivenöl (Tomatenbasis)",
+          "mention": "10 g Olivenöl (Tomatenbasis)"
+        }
+      ],
+      "weigh": [
+        {
+          "slot": "10 g Olivenöl",
+          "ingredient": "10 g Olivenöl (Tomatenbasis)"
+        }
+      ],
+      "cooking": {
+        "seconds": 180,
+        "temperature": 100,
+        "speed": "1",
+        "reverse": false
+      }
+    },
+    {
+      "text": "[TM6 – Tomatensoße] Jetzt 400 g gehackte Tomaten (1 Dose), 50 g Tomatenmark (Tomatenbasis), 20 g Balsamico, 1 TL Paprika edelsüß (Tomatenbasis), 1 TL Oregano, 1 TL Thymian und 1 TL Salz (Tomatenbasis) zugeben. Öl und Zwiebeln wurden zuvor allein angedünstet; das Paprikapulver kommt erst mit der feuchten Tomatenbasis dazu, damit es nicht anbrennt. Alle Zutaten im Mixtopf mit dem Spatel kurz vermischen. 1 TL Basilikum erst nach dem Garen beim Pürieren zugeben.",
+      "uses": [
+        {
+          "ingredient": "400 g gehackte Tomaten (1 Dose)",
+          "mention": "400 g gehackte Tomaten (1 Dose)"
+        },
+        {
+          "ingredient": "50 g Tomatenmark (Tomatenbasis)",
+          "mention": "50 g Tomatenmark (Tomatenbasis)"
+        },
+        {
+          "ingredient": "20 g Balsamico",
+          "mention": "20 g Balsamico"
+        },
+        {
+          "ingredient": "1 TL Paprika edelsüß (Tomatenbasis)",
+          "mention": "1 TL Paprika edelsüß (Tomatenbasis)"
+        },
+        {
+          "ingredient": "1 TL Oregano",
+          "mention": "1 TL Oregano"
+        },
+        {
+          "ingredient": "1 TL Thymian",
+          "mention": "1 TL Thymian"
+        },
+        {
+          "ingredient": "1 TL Salz (Tomatenbasis)",
+          "mention": "1 TL Salz (Tomatenbasis)"
+        }
+      ],
+      "weigh": [
+        {
+          "slot": "400 g gehackte Tomaten",
+          "ingredient": "400 g gehackte Tomaten (1 Dose)"
+        },
+        {
+          "slot": "50 g Tomatenmark",
+          "ingredient": "50 g Tomatenmark (Tomatenbasis)"
+        },
+        {
+          "slot": "20 g Balsamico",
+          "ingredient": "20 g Balsamico"
+        }
+      ]
+    },
+    {
+      "text": "[TM6 → FRIEND] Den gefüllten ersten Mixtopf (Tomatensoße) samt eingesetztem Mixmesser vorsichtig vom TM6 nehmen und direkt auf den Thermomix Friend setzen. Den zweiten, noch leeren TM6-Mixtopf in den TM6 einsetzen. Kein Umfüllen und keine Zwischenreinigung. Am Friend manuell 25 Min. / 100 °C / Stufe 1 (Linkslauf) einstellen und starten. Der Friend kann nicht pürieren und besitzt keine Waage.",
+      "uses": []
+    },
+    {
+      "text": "[TM6 – Paprika-Tomatensoße] In den zweiten Mixtopf 1 Zwiebel, halbiert (Paprikabasis), 1 Knoblauchzehe (Paprikabasis) und 200 g rote Paprika, in Stücken geben und zerkleinern.",
+      "uses": [
+        {
+          "ingredient": "1 Zwiebel, halbiert (Paprikabasis)",
+          "mention": "1 Zwiebel, halbiert (Paprikabasis)"
+        },
+        {
+          "ingredient": "1 Knoblauchzehe (Paprikabasis)",
+          "mention": "1 Knoblauchzehe (Paprikabasis)"
+        },
+        {
+          "ingredient": "200 g rote Paprika, in Stücken",
+          "mention": "200 g rote Paprika, in Stücken"
+        }
+      ],
+      "weigh": [
+        {
+          "slot": "200 g rote Paprika",
+          "ingredient": "200 g rote Paprika, in Stücken"
+        }
+      ],
+      "cooking": {
+        "seconds": 5,
+        "temperature": null,
+        "speed": "5",
+        "reverse": false
+      }
+    },
+    {
+      "text": "[TM6 – Paprika-Tomatensoße] Die Mischung mit dem Spatel nach unten schieben. 20 g Olivenöl (Paprikabasis) zugeben und andünsten. Das Paprikapulver erst zusammen mit den Tomaten hinzufügen, damit es nicht trocken anröstet.",
+      "uses": [
+        {
+          "ingredient": "20 g Olivenöl (Paprikabasis)",
+          "mention": "20 g Olivenöl (Paprikabasis)"
+        }
+      ],
+      "weigh": [
+        {
+          "slot": "20 g Olivenöl",
+          "ingredient": "20 g Olivenöl (Paprikabasis)"
+        }
+      ],
+      "cooking": {
+        "seconds": 180,
+        "temperature": 120,
+        "speed": "1",
+        "reverse": true
+      }
+    },
+    {
+      "text": "[TM6 – Paprika-Tomatensoße] 250 g passierte Tomaten, 30 g Tomatenmark (Paprikabasis), 1 TL Paprika edelsüß (Paprikabasis) und 1 TL Salz (Paprikabasis) zugeben. Jetzt 25 Minuten garen, während die Tomatensoße auf dem Friend parallel köchelt.",
+      "uses": [
+        {
+          "ingredient": "250 g passierte Tomaten",
+          "mention": "250 g passierte Tomaten"
+        },
+        {
+          "ingredient": "30 g Tomatenmark (Paprikabasis)",
+          "mention": "30 g Tomatenmark (Paprikabasis)"
+        },
+        {
+          "ingredient": "1 TL Paprika edelsüß (Paprikabasis)",
+          "mention": "1 TL Paprika edelsüß (Paprikabasis)"
+        },
+        {
+          "ingredient": "1 TL Salz (Paprikabasis)",
+          "mention": "1 TL Salz (Paprikabasis)"
+        }
+      ],
+      "weigh": [
+        {
+          "slot": "250 g passierte Tomaten",
+          "ingredient": "250 g passierte Tomaten"
+        },
+        {
+          "slot": "30 g Tomatenmark",
+          "ingredient": "30 g Tomatenmark (Paprikabasis)"
+        }
+      ],
+      "cooking": {
+        "seconds": 1500,
+        "temperature": 100,
+        "speed": "1",
+        "reverse": true
+      }
+    },
+    {
+      "text": "[TM6 – Paprika-Tomatensoße] Prüfen, ob alles gar und der Deckel sicher geschlossen ist. Mit dem TM6-Modus Pürieren die heiße Paprika-Tomatensoße für 20 Sek. bis zur maximalen Stufe 6 pürieren. Der Modus steigert die Drehzahl selbstständig. Die Soße anschließend getrennt abfüllen; nicht mit der Tomatensoße vermengen.",
+      "uses": [],
+      "mode": {
+        "type": "blend",
+        "seconds": 20,
+        "max_speed": "6"
+      }
+    },
+    {
+      "text": "[TM6 – Paprika-Tomatensoße getrennt abfüllen] Die fertig pürierte Paprika-Tomatensoße vorsichtig in eine separate hitzebeständige Schüssel oder einen geeigneten Behälter umfüllen und beiseitestellen. NICHT mit der Tomatensoße vermischen. Den jetzt leeren TM6-Mixtopf beiseitestellen.",
+      "uses": []
+    },
+    {
+      "text": "[FRIEND → TM6 – Tomatensoße] Prüfen, dass die 25 Minuten auf dem Friend beendet sind. Ersten Mixtopf mit Tomatensoße vorsichtig vom Friend nehmen und in den TM6 einsetzen. Jetzt 1 TL Basilikum zugeben – Basilikum kommt spät hinzu, damit sein Aroma erhalten bleibt. Mixtopfdeckel korrekt schließen.",
+      "uses": [
+        {
+          "ingredient": "1 TL Basilikum",
+          "mention": "1 TL Basilikum"
+        }
+      ]
+    },
+    {
+      "text": "[TM6 – Tomatensoße] Nachdem der Mixtopf vom Friend zurück auf den TM6 gesetzt und Basilikum zugegeben wurde, den Deckel sicher schließen. Mit dem TM6-Modus Pürieren für 20 Sek. bis zur maximalen Stufe 6 pürieren. Die beiden Soßen unbedingt getrennt halten.",
+      "uses": [],
+      "mode": {
+        "type": "blend",
+        "seconds": 20,
+        "max_speed": "6"
+      }
+    },
+    {
+      "text": "[FERTIG] Beide Soßen getrennt abschmecken und in zwei separat beschrifteten, hitzebeständigen Behältern aufbewahren: 1. Kräuter-Tomatensoße; 2. Paprika-Tomatensoße. Die Salzmenge beträgt jeweils 1 TL (insgesamt 2 TL), wie in den Ausgangsrezepten. Lebensmittel bei Bedarf rasch und hygienisch abkühlen.",
+      "uses": []
+    }
+  ],
+  "notes": [
+    "ERGEBNIS: ZWEI SEPARATE SOßEN. Tomatensoße wird auf dem Friend gegart und danach im TM6 püriert; Paprika-Tomatensoße wird im TM6 gegart und zuerst separat püriert und abgefüllt. Nicht zusammenführen.",
+    "Zwei TM6-Mixtöpfe sind erforderlich. Den ersten gefüllten Mixtopf direkt vom TM6 auf den Friend setzen, danach den zweiten leeren Mixtopf in den TM6. Kein Umfüllen oder Zwischenreinigen zwischen den Ansätzen.",
+    "Friend-Schritt am Gerät manuell einstellen: 25 Min. / 100 °C / Stufe 1 im Linkslauf. Die Friend-Bluetooth-Übergabe aus selbst erstellten Cookidoo-Rezepten ist nicht bestätigt.",
+    "Gewürzführung: beide Paprikapulver erst mit der jeweiligen feuchten Tomatenphase zugeben; Oregano und Thymian mitköcheln; Basilikum erst beim abschließenden Pürieren der Tomatensoße zugeben.",
+    "Salz bleibt unverändert: 1 TL Tomatensoße und 1 TL Paprika-Tomatensoße (zusammen 2 TL).",
+    "Alle 19 Zutaten und ihre Mengen sind in Kochanweisungen aufgeführt; für 8 Grammzutaten sind TM6-Wiegemarkierungen vorgesehen. Friend besitzt keine Waage.",
+    "Bei heißen Speisen den Deckel korrekt verriegeln, Drehzahlen stufenweise erhöhen, keinen Turbo verwenden. Mixtopf nicht über die MAX-Markierung füllen. Heiße Mixtöpfe nur an geeigneten Griffstellen bewegen.",
+    "Die berechnete Gesamtdauer von rund 65 Minuten ist eine Planungsschätzung. Rezept wurde weder von Vorwerk noch praktisch am TM6 und Friend getestet.",
+    "Zum Pürieren beider heißen Soßen den TM6-Modus Pürieren mit 20 Sekunden und maximal Stufe 6 verwenden. Er steigert die Drehzahl automatisch; Modusübertragung aus selbst erstelltem Rezept ist noch am Gerät zu prüfen.",
+    "Gemeinsamer erster Arbeitsschritt: alle Zwiebeln und Knoblauchzehen schälen, Zwiebeln halbieren, Paprika waschen, entkernen und grob schneiden. Gemüse anschließend nach Soßen getrennt bereitstellen."
+  ]
+}
