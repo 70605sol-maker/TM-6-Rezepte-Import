@@ -1,0 +1,37 @@
+name: Fiskgryta TM6 - Trockenlauf
+on:
+  push:
+    branches: [main]
+    paths:
+      - "recipes/fiskgryta_tm6.py"
+      - "scripts/test_fiskgryta.py"
+      - ".github/workflows/fiskgryta-dry-run.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out my recipes
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download Cookidoo Uploader source at pinned commit
+        run: |
+          git clone https://github.com/dfourn/cookidoo-uploader.git /tmp/cookidoo-uploader
+          cd /tmp/cookidoo-uploader
+          git checkout b4158e9daaf6e187963ee85b25543cceb06a3f13
+      - name: Install validator dependencies
+        run: python -m pip install --disable-pip-version-check /tmp/cookidoo-uploader
+      - name: Check Fiskgryta payload WITHOUT upload
+        run: python scripts/test_fiskgryta.py
+      - name: Attach generated recipe JSON
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fiskgryta-tm6-dry-run
+          path: out/fiskgryta_tm6_cookidoo_dry_run.json
+          retention-days: 7
