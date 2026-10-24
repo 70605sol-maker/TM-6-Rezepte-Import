@@ -150,6 +150,7 @@
     "Tomatenbasis wird nach dem Andünsten und Einwiegen aller Zutaten im Friend parallel weitergekocht.",
     "Die Salzmenge aus den beiden Ausgangsrezepten beträgt insgesamt bis zu 2 TL. Zunächst weniger verwenden.",
     "Heiße Soßen nur vorsichtig zusammenführen. MAX-Markierung beachten; Pürierdrehzahl langsam erhöhen.",
-    "Das Rezept nutzt für Zutaten mit Grammangabe INGREDIENT-Markierungen. Bei stück- und löffelweisen Zutaten ist keine automatische Grammwägung vorgesehen."
+    "Das Rezept nutzt für Zutaten mit Grammangabe INGREDIENT-Markierungen. Bei stück- und löffelweisen Zutaten ist keine automatische Grammwägung vorgesehen.",
+    "Wiegefunktion im Testkonto prüfen: nur Grammzutaten werden automatisch als Einwiegeschritte markiert."
   ]
 }
