@@ -1,0 +1,35 @@
+name: Cookidoo Testkonto - Fiskgryta hochladen
+on:
+  workflow_dispatch:
+    inputs:
+      bestaetigung:
+        description: 'Zum Hochladen TESTKONTO eingeben'
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  upload:
+    if: ${{ inputs.bestaetigung == 'TESTKONTO' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      COOKIDOO_DOMAIN: https://cookidoo.de
+      COOKIDOO_LOCALE: de-DE
+      COOKIDOO_EMAIL: ${{ secrets.COOKIDOO_TEST_EMAIL }}
+      COOKIDOO_PASSWORD: ${{ secrets.COOKIDOO_TEST_PASSWORD }}
+    steps:
+      - name: Rezepte herunterladen
+        uses: actions/checkout@v4
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Cookidoo-Uploader (festgelegter Stand)
+        run: |
+          git clone https://github.com/dfourn/cookidoo-uploader.git /tmp/cookidoo-uploader
+          cd /tmp/cookidoo-uploader
+          git checkout b4158e9daaf6e187963ee85b25543cceb06a3f13
+          python -m pip install --disable-pip-version-check .
+      - name: Fiskgryta in Testkonto hochladen
+        run: python scripts/upload_fiskgryta_test.py
