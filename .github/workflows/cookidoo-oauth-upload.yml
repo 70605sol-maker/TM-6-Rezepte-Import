@@ -1,0 +1,38 @@
+name: Cookidoo Testkonto - Fiskgryta via OAuth2 hochladen
+on:
+  workflow_dispatch:
+    inputs:
+      bestaetigung:
+        description: 'Zum einmaligen Hochladen TESTKONTO eingeben'
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: cookidoo-fiskgryta-oauth-upload
+  cancel-in-progress: false
+jobs:
+  upload:
+    if: ${{ inputs.bestaetigung == 'TESTKONTO' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      COOKIDOO_TEST_EMAIL: ${{ secrets.COOKIDOO_TEST_EMAIL }}
+      COOKIDOO_TEST_PASSWORD: ${{ secrets.COOKIDOO_TEST_PASSWORD }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned Cookidoo dependencies
+        run: |
+          git clone https://github.com/miaucl/cookidoo-api.git /tmp/cookidoo-api
+          git -C /tmp/cookidoo-api checkout 7844f053a1a0173badc64aa204fc2bb998b8bcfb
+          python -m pip install --disable-pip-version-check /tmp/cookidoo-api
+          git clone https://github.com/dfourn/cookidoo-uploader.git /tmp/cookidoo-uploader
+          git -C /tmp/cookidoo-uploader checkout b4158e9daaf6e187963ee85b25543cceb06a3f13
+          python -m pip install --disable-pip-version-check /tmp/cookidoo-uploader
+      - name: Upload recipe to TEST account
+        run: python scripts/upload_fiskgryta_oauth.py
