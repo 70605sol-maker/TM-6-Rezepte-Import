@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "title": "Thai-Kokos-Curry mit Ofentofu – Reiswahl Friend oder TM6 (v3)",
+  "servings": 3,
+  "prep_time_minutes": 18,
+  "total_time_minutes": 60,
+  "ingredients": [
+    "250 g Jasminreis",
+    "1200 g Wasser für Friend (nur Variante A)",
+    "1000 g Wasser für TM6 (nur Variante B)",
+    "1 Zwiebel, halbiert",
+    "2 Knoblauchzehen",
+    "15 g Ingwer, geschält",
+    "20 g neutrales Öl für den Mixtopf",
+    "20 g vegetarische rote Thai-Currypaste",
+    "160 g rote Paprika, in Streifen",
+    "180 g Zucchini, in Halbmondscheiben",
+    "100 g Karotte, in dünnen Scheiben",
+    "150 g Brokkoli, in kleinen Röschen",
+    "400 g Kokosmilch",
+    "150 g Wasser für das Curry",
+    "20 g Sojasauce",
+    "1 TL brauner Zucker",
+    "250 g fester Naturtofu",
+    "10 g neutrales Öl für Ofentofu",
+    "10 g Speisestärke für Ofentofu",
+    "5 g Sojasauce für Ofentofu",
+    "1 Limette",
+    "etwas Thai-Basilikum oder Koriander (optional)"
+  ],
+  "steps": [
+    {
+      "text": "[REIS – HIER EINMAL ENTSCHEIDEN: A ODER B; NICHT BEIDE] 250 g Jasminreis gründlich waschen und in ein Garkörbchen geben. WEG A – FRIEND (parallel): 1200 g Wasser für Friend (nur Variante A) mit einer Küchenwaage oder vorher im TM6 abwiegen und in den separaten Mixtopf des Friend füllen. Garkörbchen einhängen, Deckel schließen und am Friend MANUELL ca. 25 Min. / Varoma / Stufe 1 (Linkslauf) einstellen. Auf Wasserkontakt des Reises und MAX-Markierung achten. Der Friend hat keine Waage. Sofort mit dem nächsten Rezeptschritt weitermachen, während der Friend kocht. WEG B – TM6 (nacheinander): 1000 g Wasser für TM6 (nur Variante B) in den TM6-Mixtopf geben, Garkörbchen einhängen und am TM6 MANUELL 20 Min. / 100 °C / Stufe 4 einstellen. Danach den Reis mit dem Spatel herausheben, abgedeckt warm halten, Mixtopf vorsichtig leeren und kurz ausspülen. Erst dann zum nächsten Schritt gehen. In beiden Varianten Reisgargrad prüfen und bei Bedarf Garzeit verlängern. Beide Reismethoden sind manuelle, nicht automatisch programmierte Varianten.",
+      "uses": [
+        {
+          "ingredient": "250 g Jasminreis",
+          "mention": "250 g Jasminreis"
+        },
+        {
+          "ingredient": "1200 g Wasser für Friend (nur Variante A)",
+          "mention": "1200 g Wasser für Friend (nur Variante A)"
+        },
+        {
+          "ingredient": "1000 g Wasser für TM6 (nur Variante B)",
+          "mention": "1000 g Wasser für TM6 (nur Variante B)"
+        }
+      ]
+    },
+    {
+      "text": "[BACKOFEN – manuell] Backofen auf 200 °C Umluft (alternativ 220 °C Ober-/Unterhitze) vorheizen. Backblech mit Backpapier vorbereiten. Wenn Variante A gewählt wurde, gart der Reis währenddessen auf dem Friend.",
+      "uses": []
+    },
+    {
+      "text": "[BACKOFEN – manuell] 250 g fester Naturtofu gut trocken tupfen, in 2 cm große Würfel schneiden und mit 10 g neutrales Öl für Ofentofu, 10 g Speisestärke für Ofentofu und 5 g Sojasauce für Ofentofu vermengen. Mit Abstand auf dem Blech verteilen und im vorgeheizten Backofen 25–30 Minuten backen. Nach etwa 15 Minuten wenden. Separaten Ofentimer verwenden. Während der Tofu bäckt, sofort die folgenden TM6-Curryschritte ausführen.",
+      "uses": [
+        {
+          "ingredient": "250 g fester Naturtofu",
+          "mention": "250 g fester Naturtofu"
+        },
+        {
+          "ingredient": "10 g neutrales Öl für Ofentofu",
+          "mention": "10 g neutrales Öl für Ofentofu"
+        },
+        {
+          "ingredient": "10 g Speisestärke für Ofentofu",
+          "mention": "10 g Speisestärke für Ofentofu"
+        },
+        {
+          "ingredient": "5 g Sojasauce für Ofentofu",
+          "mention": "5 g Sojasauce für Ofentofu"
+        }
+      ]
+    },
+    {
+      "text": "1 Zwiebel, halbiert, 2 Knoblauchzehen und 15 g Ingwer, geschält, in den TM6-Mixtopf geben und zerkleinern.",
+      "uses": [
+        {
+          "ingredient": "1 Zwiebel, halbiert",
+          "mention": "1 Zwiebel, halbiert"
+        },
+        {
+          "ingredient": "2 Knoblauchzehen",
+          "mention": "2 Knoblauchzehen"
+        },
+        {
+          "ingredient": "15 g Ingwer, geschält",
+          "mention": "15 g Ingwer, geschält"
+        }
+      ],
+      "cooking": {
+        "seconds": 5,
+        "temperature": null,
+        "speed": "5",
+        "reverse": false
+      },
+      "weigh": [
+        {
+          "slot": "15 g Ingwer",
+          "ingredient": "15 g Ingwer, geschält"
+        }
+      ]
+    },
+    {
+      "text": "Mit dem Spatel nach unten schieben. 20 g neutrales Öl für den Mixtopf zugeben und andünsten.",
+      "uses": [
+        {
+          "ingredient": "20 g neutrales Öl für den Mixtopf",
+          "mention": "20 g neutrales Öl für den Mixtopf"
+        }
+      ],
+      "cooking": {
+        "seconds": 180,
+        "temperature": 120,
+        "speed": "1",
+        "reverse": false
+      },
+      "weigh": [
+        {
+          "slot": "20 g neutrales Öl",
+          "ingredient": "20 g neutrales Öl für den Mixtopf"
+        }
+      ]
+    },
+    {
+      "text": "20 g vegetarische rote Thai-Currypaste zugeben und anrösten.",
+      "uses": [
+        {
+          "ingredient": "20 g vegetarische rote Thai-Currypaste",
+          "mention": "20 g vegetarische rote Thai-Currypaste"
+        }
+      ],
+      "cooking": {
+        "seconds": 120,
+        "temperature": 120,
+        "speed": "1",
+        "reverse": false
+      },
+      "weigh": [
+        {
+          "slot": "20 g vegetarische rote Thai-Currypaste",
+          "ingredient": "20 g vegetarische rote Thai-Currypaste"
+        }
+      ]
+    },
+    {
+      "text": "160 g rote Paprika, in Streifen, 180 g Zucchini, in Halbmondscheiben, 100 g Karotte, in dünnen Scheiben, 150 g Brokkoli, in kleinen Röschen, 400 g Kokosmilch, 150 g Wasser für das Curry, 20 g Sojasauce und 1 TL brauner Zucker zugeben. Mit dem Spatel vorsichtig verteilen.",
+      "uses": [
+        {
+          "ingredient": "160 g rote Paprika, in Streifen",
+          "mention": "160 g rote Paprika, in Streifen"
+        },
+        {
+          "ingredient": "180 g Zucchini, in Halbmondscheiben",
+          "mention": "180 g Zucchini, in Halbmondscheiben"
+        },
+        {
+          "ingredient": "100 g Karotte, in dünnen Scheiben",
+          "mention": "100 g Karotte, in dünnen Scheiben"
+        },
+        {
+          "ingredient": "150 g Brokkoli, in kleinen Röschen",
+          "mention": "150 g Brokkoli, in kleinen Röschen"
+        },
+        {
+          "ingredient": "400 g Kokosmilch",
+          "mention": "400 g Kokosmilch"
+        },
+        {
+          "ingredient": "150 g Wasser für das Curry",
+          "mention": "150 g Wasser für das Curry"
+        },
+        {
+          "ingredient": "20 g Sojasauce",
+          "mention": "20 g Sojasauce"
+        },
+        {
+          "ingredient": "1 TL brauner Zucker",
+          "mention": "1 TL brauner Zucker"
+        }
+      ],
+      "weigh": [
+        {
+          "slot": "160 g rote Paprika",
+          "ingredient": "160 g rote Paprika, in Streifen"
+        },
+        {
+          "slot": "180 g Zucchini",
+          "ingredient": "180 g Zucchini, in Halbmondscheiben"
+        },
+        {
+          "slot": "100 g Karotte",
+          "ingredient": "100 g Karotte, in dünnen Scheiben"
+        },
+        {
+          "slot": "150 g Brokkoli",
+          "ingredient": "150 g Brokkoli, in kleinen Röschen"
+        },
+        {
+          "slot": "400 g Kokosmilch",
+          "ingredient": "400 g Kokosmilch"
+        },
+        {
+          "slot": "150 g Wasser für das Curry",
+          "ingredient": "150 g Wasser für das Curry"
+        },
+        {
+          "slot": "20 g Sojasauce",
+          "ingredient": "20 g Sojasauce"
+        }
+      ]
+    },
+    {
+      "text": "Curry schonend garen. Garkörbchen statt Messbecher als Spritzschutz lose auf den Mixtopfdeckel setzen. Gargrad des Gemüses prüfen und bei Bedarf kurz nachgaren.",
+      "uses": [],
+      "cooking": {
+        "seconds": 840,
+        "temperature": 100,
+        "speed": "soft",
+        "reverse": true
+      }
+    },
+    {
+      "text": "1 Limette halbieren und den Saft einer Hälfte vorsichtig mit dem Spatel in das Curry rühren. Die andere Hälfte in Spalten schneiden. Abschmecken.",
+      "uses": [
+        {
+          "ingredient": "1 Limette",
+          "mention": "1 Limette"
+        }
+      ]
+    },
+    {
+      "text": "[FERTIGSTELLEN] Reis aus der gewählten Variante prüfen und gegebenenfalls warm halten. Ofentofu nach insgesamt 25–30 Minuten auf Bräunung prüfen und falls nötig weitere 3–5 Minuten backen. Reis und Curry in Schalen verteilen. Tofu erst kurz vor dem Servieren auflegen und mit etwas Thai-Basilikum oder Koriander (optional) garnieren.",
+      "uses": [
+        {
+          "ingredient": "etwas Thai-Basilikum oder Koriander (optional)",
+          "mention": "etwas Thai-Basilikum oder Koriander (optional)"
+        }
+      ]
+    }
+  ],
+  "enforce_quantities_in_steps": true,
+  "notes": [
+    "Am Anfang in genau einem Schritt zwischen Friend-Reis (parallel) und TM6-Reis (nacheinander) entscheiden. Nicht beide Varianten kochen. Die Wahl wird als Text getroffen; ein automatischer Cookidoo-Verzweigungsschalter steht nicht zur Verfügung.",
+    "Friend benötigt einen separaten kompatiblen Mixtopf mit Garkörbchen. Der Friend besitzt keine Waage. Seine Reis-Gareinstellung (25 Min./Varoma/Stufe 1, 1200 g Wasser) ist eine nicht praktisch getestete Anpassung; Reis und Wasserkontakt kontrollieren. Nie die MAX-Markierung überschreiten.",
+    "TM6-Reisvariante: 1000 g Wasser, 20 Min./100 °C/Stufe 4, Garkörbchen. Diese Reisvariante wird im Rezepttext manuell gestartet und ist kein programmierter TM6-Schritt, damit die Friend-Variante nicht blockiert wird.",
+    "Ofentofu: 200 °C Umluft oder 220 °C Ober-/Unterhitze, 25–30 Min., nach der Hälfte wenden; keine Pfanne.",
+    "Mit Friend parallel: Friend kocht Reis, TM6 kocht Curry und Backofen backt Tofu. Ohne Friend: erst Reis im TM6, danach Curry, während parallel der Ofen läuft.",
+    "Vegetarische Thai-Currypaste ohne Fischsauce und Garnelenpaste verwenden. Reisgarzeiten hängen von Sorte und Kochgerät ab.",
+    "Limettensaft erst nach dem Kochen einrühren und Tofu erst kurz vor dem Servieren auflegen.",
+    "Inoffizielle und nicht durch Vorwerk getestete Adaption. Alle Temperaturen, Geschwindigkeiten und maximalen Füllmengen vor dem Kochen überprüfen.",
+    "Der GitHub-Workflow importiert nur ins Cookidoo-Testkonto. Übernahme ins Hauptkonto bleibt manuell."
+  ]
+}
