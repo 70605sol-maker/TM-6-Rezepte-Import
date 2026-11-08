@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "title": "Vegetarisches Thai-Kokos-Curry mit knusprigem Tofu und Jasminreis (TM6) v1",
+  "servings": 3,
+  "prep_time_minutes": 15,
+  "total_time_minutes": 50,
+  "ingredients": [
+    "250 g Jasminreis",
+    "1000 g Wasser für den Reis",
+    "1 Zwiebel, halbiert",
+    "2 Knoblauchzehen",
+    "15 g Ingwer, geschält",
+    "20 g neutrales Öl für den Mixtopf",
+    "20 g vegetarische rote Thai-Currypaste",
+    "160 g rote Paprika, in Streifen",
+    "180 g Zucchini, in Halbmondscheiben",
+    "100 g Karotte, in dünnen Scheiben",
+    "150 g Brokkoli, in kleinen Röschen",
+    "400 g Kokosmilch",
+    "150 g Wasser für das Curry",
+    "20 g Sojasauce",
+    "1 TL brauner Zucker",
+    "250 g fester Naturtofu",
+    "1 EL neutrales Öl zum Braten",
+    "1 Limette",
+    "etwas Thai-Basilikum oder Koriander (optional)"
+  ],
+  "steps": [
+    {
+      "text": "250 g Jasminreis im Garkörbchen unter kaltem Wasser gründlich waschen. 1000 g Wasser für den Reis in den Mixtopf geben, Garkörbchen mit Reis einhängen.",
+      "uses": [
+        {
+          "ingredient": "250 g Jasminreis",
+          "mention": "250 g Jasminreis"
+        },
+        {
+          "ingredient": "1000 g Wasser für den Reis",
+          "mention": "1000 g Wasser für den Reis"
+        }
+      ],
+      "weigh": [
+        {
+          "slot": "1000 g Wasser für den Reis",
+          "ingredient": "1000 g Wasser für den Reis"
+        }
+      ]
+    },
+    {
+      "text": "Jasminreis im Garkörbchen garen. Danach Garkörbchen vorsichtig mit dem Spatel herausheben.",
+      "uses": [],
+      "cooking": {
+        "seconds": 1200,
+        "temperature": 100,
+        "speed": "4",
+        "reverse": false
+      }
+    },
+    {
+      "text": "Den Reis warm halten. Mixtopf leeren und kurz ausspülen; auf heißes Wasser achten.",
+      "uses": []
+    },
+    {
+      "text": "1 Zwiebel, halbiert, 2 Knoblauchzehen und 15 g Ingwer, geschält, in den Mixtopf geben und zerkleinern.",
+      "uses": [
+        {
+          "ingredient": "1 Zwiebel, halbiert",
+          "mention": "1 Zwiebel, halbiert"
+        },
+        {
+          "ingredient": "2 Knoblauchzehen",
+          "mention": "2 Knoblauchzehen"
+        },
+        {
+          "ingredient": "15 g Ingwer, geschält",
+          "mention": "15 g Ingwer, geschält"
+        }
+      ],
+      "cooking": {
+        "seconds": 5,
+        "temperature": null,
+        "speed": "5",
+        "reverse": false
+      },
+      "weigh": [
+        {
+          "slot": "15 g Ingwer",
+          "ingredient": "15 g Ingwer, geschält"
+        }
+      ]
+    },
+    {
+      "text": "Mit dem Spatel nach unten schieben. 20 g neutrales Öl für den Mixtopf zugeben und andünsten.",
+      "uses": [
+        {
+          "ingredient": "20 g neutrales Öl für den Mixtopf",
+          "mention": "20 g neutrales Öl für den Mixtopf"
+        }
+      ],
+      "cooking": {
+        "seconds": 180,
+        "temperature": 120,
+        "speed": "1",
+        "reverse": false
+      },
+      "weigh": [
+        {
+          "slot": "20 g neutrales Öl",
+          "ingredient": "20 g neutrales Öl für den Mixtopf"
+        }
+      ]
+    },
+    {
+      "text": "20 g vegetarische rote Thai-Currypaste zugeben und anrösten.",
+      "uses": [
+        {
+          "ingredient": "20 g vegetarische rote Thai-Currypaste",
+          "mention": "20 g vegetarische rote Thai-Currypaste"
+        }
+      ],
+      "cooking": {
+        "seconds": 120,
+        "temperature": 120,
+        "speed": "1",
+        "reverse": false
+      },
+      "weigh": [
+        {
+          "slot": "20 g vegetarische rote Thai-Currypaste",
+          "ingredient": "20 g vegetarische rote Thai-Currypaste"
+        }
+      ]
+    },
+    {
+      "text": "160 g rote Paprika, in Streifen, 180 g Zucchini, in Halbmondscheiben, 100 g Karotte, in dünnen Scheiben, 150 g Brokkoli, in kleinen Röschen, 400 g Kokosmilch, 150 g Wasser für das Curry, 20 g Sojasauce und 1 TL brauner Zucker in den Mixtopf geben. Mit dem Spatel vorsichtig verteilen.",
+      "uses": [
+        {
+          "ingredient": "160 g rote Paprika, in Streifen",
+          "mention": "160 g rote Paprika, in Streifen"
+        },
+        {
+          "ingredient": "180 g Zucchini, in Halbmondscheiben",
+          "mention": "180 g Zucchini, in Halbmondscheiben"
+        },
+        {
+          "ingredient": "100 g Karotte, in dünnen Scheiben",
+          "mention": "100 g Karotte, in dünnen Scheiben"
+        },
+        {
+          "ingredient": "150 g Brokkoli, in kleinen Röschen",
+          "mention": "150 g Brokkoli, in kleinen Röschen"
+        },
+        {
+          "ingredient": "400 g Kokosmilch",
+          "mention": "400 g Kokosmilch"
+        },
+        {
+          "ingredient": "150 g Wasser für das Curry",
+          "mention": "150 g Wasser für das Curry"
+        },
+        {
+          "ingredient": "20 g Sojasauce",
+          "mention": "20 g Sojasauce"
+        },
+        {
+          "ingredient": "1 TL brauner Zucker",
+          "mention": "1 TL brauner Zucker"
+        }
+      ],
+      "weigh": [
+        {
+          "slot": "160 g rote Paprika",
+          "ingredient": "160 g rote Paprika, in Streifen"
+        },
+        {
+          "slot": "180 g Zucchini",
+          "ingredient": "180 g Zucchini, in Halbmondscheiben"
+        },
+        {
+          "slot": "100 g Karotte",
+          "ingredient": "100 g Karotte, in dünnen Scheiben"
+        },
+        {
+          "slot": "150 g Brokkoli",
+          "ingredient": "150 g Brokkoli, in kleinen Röschen"
+        },
+        {
+          "slot": "400 g Kokosmilch",
+          "ingredient": "400 g Kokosmilch"
+        },
+        {
+          "slot": "150 g Wasser für das Curry",
+          "ingredient": "150 g Wasser für das Curry"
+        },
+        {
+          "slot": "20 g Sojasauce",
+          "ingredient": "20 g Sojasauce"
+        }
+      ]
+    },
+    {
+      "text": "Garen. Statt des Messbechers das Garkörbchen als Spritzschutz auf den Deckel stellen. Danach prüfen, ob das Gemüse gar, aber noch bissfest ist.",
+      "uses": [],
+      "cooking": {
+        "seconds": 840,
+        "temperature": 100,
+        "speed": "soft",
+        "reverse": true
+      }
+    },
+    {
+      "text": "Während das Curry gart, 250 g fester Naturtofu trocken tupfen und in ca. 2 cm große Würfel schneiden. 1 EL neutrales Öl zum Braten in einer Pfanne erhitzen und den Tofu rundherum 6–8 Minuten goldbraun braten.",
+      "uses": [
+        {
+          "ingredient": "250 g fester Naturtofu",
+          "mention": "250 g fester Naturtofu"
+        },
+        {
+          "ingredient": "1 EL neutrales Öl zum Braten",
+          "mention": "1 EL neutrales Öl zum Braten"
+        }
+      ]
+    },
+    {
+      "text": "1 Limette halbieren. Saft einer Hälfte vorsichtig mit dem Spatel unter das Curry rühren; restliche Hälfte in Spalten schneiden. Reis und Curry in Schalen anrichten, Tofu darauf verteilen und mit etwas Thai-Basilikum oder Koriander (optional) garnieren.",
+      "uses": [
+        {
+          "ingredient": "1 Limette",
+          "mention": "1 Limette"
+        },
+        {
+          "ingredient": "etwas Thai-Basilikum oder Koriander (optional)",
+          "mention": "etwas Thai-Basilikum oder Koriander (optional)"
+        }
+      ]
+    },
+    {
+      "text": "Abschmecken; bei Bedarf mit etwas zusätzlicher Sojasauce oder Limettensaft würzen. Koch- und Garzeiten sind Richtwerte.",
+      "uses": []
+    }
+  ],
+  "enforce_quantities_in_steps": true,
+  "notes": [
+    "Vegetarische Currypaste verwenden: Etikett auf Garnelenpaste, Fischsauce und andere tierische Zutaten prüfen.",
+    "Der Tofu wird separat in der Pfanne gebraten; kein automatisch ausgeführter TM6-Schritt.",
+    "Vor dem Kochen TM6-Einstellungen, Gargrad und maximale Füllmenge prüfen. Nicht von Vorwerk geprüfte Adaption.",
+    "Die Schärfe hängt von der Currypaste ab: Für mild ca. 10 g, für scharf ca. 30 g verwenden und die Zutatenangabe anpassen.",
+    "Limettensaft erst nach dem Garen zugeben.",
+    "Nach Upload ins Cookidoo-Testkonto erfolgt Übernahme ins Hauptkonto manuell."
+  ]
+}
