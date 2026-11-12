@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "title": "Gretechen's Kartoffel Gratin",
+  "servings": 4,
+  "prep_time_minutes": 15,
+  "total_time_minutes": 60,
+  "ingredients": [
+    "900 g gekochte Kartoffeln",
+    "200 ml Schlagsahne",
+    "3 Eier",
+    "75 g geriebener Emmentaler (für die Soße)",
+    "145 g geriebener Emmentaler (für die Kruste)",
+    "½ TL Salz",
+    "1 TL Paprikapulver",
+    "1 Löffelspitze Muskat",
+    "Butter oder Öl zum Einfetten",
+    "etwas Pfeffer (optional)"
+  ],
+  "steps": [
+    {
+      "text": "Backofen auf 180 °C Umluft vorheizen. Eine Auflaufform (29,5 × 19 × 7 cm) mit Butter oder Öl zum Einfetten einfetten.",
+      "uses": [
+        {
+          "ingredient": "Butter oder Öl zum Einfetten",
+          "mention": "Butter oder Öl zum Einfetten"
+        }
+      ]
+    },
+    {
+      "text": "900 g gekochte Kartoffeln in etwa 5 mm dicke Scheiben schneiden und in die gefettete Auflaufform schichten. Nach Wunsch mit etwas Pfeffer (optional) würzen.",
+      "uses": [
+        {
+          "ingredient": "900 g gekochte Kartoffeln",
+          "mention": "900 g gekochte Kartoffeln"
+        },
+        {
+          "ingredient": "etwas Pfeffer (optional)",
+          "mention": "etwas Pfeffer (optional)"
+        }
+      ]
+    },
+    {
+      "text": "3 Eier, 200 ml Schlagsahne, ½ TL Salz, 1 TL Paprikapulver und 1 Löffelspitze Muskat in den Mixtopf geben und verrühren.",
+      "uses": [
+        {
+          "ingredient": "3 Eier",
+          "mention": "3 Eier"
+        },
+        {
+          "ingredient": "200 ml Schlagsahne",
+          "mention": "200 ml Schlagsahne"
+        },
+        {
+          "ingredient": "½ TL Salz",
+          "mention": "½ TL Salz"
+        },
+        {
+          "ingredient": "1 TL Paprikapulver",
+          "mention": "1 TL Paprikapulver"
+        },
+        {
+          "ingredient": "1 Löffelspitze Muskat",
+          "mention": "1 Löffelspitze Muskat"
+        }
+      ],
+      "cooking": {
+        "seconds": 15,
+        "temperature": null,
+        "speed": "3",
+        "reverse": false
+      }
+    },
+    {
+      "text": "75 g geriebener Emmentaler (für die Soße) zugeben und unterrühren.",
+      "uses": [
+        {
+          "ingredient": "75 g geriebener Emmentaler (für die Soße)",
+          "mention": "75 g geriebener Emmentaler (für die Soße)"
+        }
+      ],
+      "weigh": [
+        {
+          "slot": "75 g geriebener Emmentaler",
+          "ingredient": "75 g geriebener Emmentaler (für die Soße)"
+        }
+      ],
+      "cooking": {
+        "seconds": 5,
+        "temperature": null,
+        "speed": "2",
+        "reverse": true
+      }
+    },
+    {
+      "text": "Die Eier-Sahne-Käse-Mischung gleichmäßig über die Kartoffelscheiben gießen.",
+      "uses": []
+    },
+    {
+      "text": "145 g geriebener Emmentaler (für die Kruste) gleichmäßig darüberstreuen.",
+      "uses": [
+        {
+          "ingredient": "145 g geriebener Emmentaler (für die Kruste)",
+          "mention": "145 g geriebener Emmentaler (für die Kruste)"
+        }
+      ]
+    },
+    {
+      "text": "Auf mittlerer Schiene bei 180 °C Umluft etwa 35–40 Minuten backen. Nach 20 Minuten die Bräunung kontrollieren. Die Eier-Sahne-Mischung muss auch in der Mitte vollständig gestockt sein. Falls nötig, weitere 5 Minuten backen.",
+      "uses": []
+    },
+    {
+      "text": "Gratin vor dem Servieren 5 Minuten ruhen lassen.",
+      "uses": []
+    }
+  ],
+  "notes": [
+    "Für 3–4 Portionen. Die verwendete Auflaufform misst 29,5 × 19 × 7 cm.",
+    "900 g bereits gekochte Kartoffeln verwenden; die Kochzeit der Kartoffeln ist in der Gesamtdauer nicht enthalten.",
+    "Die angegebenen 220 g geriebener Emmentaler werden aufgeteilt: 75 g für die Soße und 145 g für die Kruste.",
+    "Pfeffer ist in der Zubereitung des Ausgangsrezepts genannt, aber nicht in der ursprünglichen Zutatenliste; deshalb hier optional.",
+    "Backzeit etwa 35–40 Minuten bei 180 °C Umluft; nach 20 Minuten die Bräunung kontrollieren und gegebenenfalls 5 Minuten länger backen.",
+    "Der Backvorgang und die Ruhezeit finden außerhalb des TM6 statt und sind nicht automatisch steuerbar.",
+    "Der automatische Upload erfolgt nur ins Cookidoo-Testkonto. Die Übernahme ins Hauptkonto erfolgt anschließend manuell."
+  ],
+  "enforce_quantities_in_steps": true
+}
